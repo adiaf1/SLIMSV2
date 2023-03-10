@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="{{asset('assets/modules/ionicons/css/ionicons.min.css')}}">
 
     <link rel="stylesheet" href="{{asset('assets/modules/izitoast/css/iziToast.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('assets/modules/select2/dist/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/jquery-selectric/selectric.css')}}">
     <style>
         #form_pasien{
             margin-bottom :6px;
@@ -126,11 +129,17 @@
                             <label for="ruangan"
                                 class="col-sm-2 col-form-label text-right">Ruangan</label>
                             <div class="col-sm-4" >
-                                <input type="text"
+                                <!-- <input type="text"
                                     class="form-control "
                                     id="ruangan"
                                     name="ruangan"
-                                    placeholder="Ruangan">
+                                    placeholder="Ruangan"> -->
+
+                                <select id="ruangan" name="ruangan" class="form-control  selectric">
+                                    <option value="">Pilih Ruangan</option>
+                                    <option value="0">Mawar</option>
+                                    <option value="1">Melati</option>
+                                </select>
                             </div>
                             <label for="penjamin"
                                 class="col-sm-2 col-form-label text-right">Penjamin</label>
@@ -359,10 +368,14 @@
 
     <script src="{{asset('assets/modules/izitoast/js/iziToast.min.js')}}"></script>
     <script src="{{asset('assets/modules/sweetalert/sweetalert.min.js')}}"></script>
+    <script src="{{('assets/modules/select2/dist/js/select2.full.min.js')}}"></script>
+    <script src="{{asset('assets/modules/jquery-selectric/jquery.selectric.min.js')}}"></script>
 
     <!-- Page Specific JS File -->
     <script src="{{asset('assets/js/page/modules-datatables.js')}}"></script>
 
     <script src="{{asset('assets/js/page/modules-toastr.js')}}"></script>
     <script src="{{asset('assets/js/page/modules-sweetalert.js')}}"></script>
+
+    <script src="{{asset('assets/js/page/forms-advanced-forms.js')}}"></script>
 @endpush
